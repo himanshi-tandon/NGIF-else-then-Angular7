@@ -1,9 +1,9 @@
-<h1>Welcome The Example of NgIF else Then</h1>
 
 
-<h2>Using Ngif</h2>
+
+<!-- <h2>Using Ngif</h2>
 <input type="radio" name="rdbtn" (click)="Change_radio(true)">True
-<input type="radio" name="rdbtn" (click)="Change_radio(false)">False
+<input type="radio" name="rdbtn" (click)="Change_radio(false)">False -->
 
 <!-- <div *ngIf="ISvalid ; else elseblock">
   THIS IS VALID DATA
@@ -15,9 +15,7 @@
 </ng-template> -->
 
 
-
-
-<div *ngIf="ISvalid ;then thenblock else elseblock"></div>
+<!-- <div *ngIf="ISvalid ;then thenblock else elseblock"></div>
   <ng-template #thenblock>
     <div *ngIf="ISvalid">
       THIS is valid show with then block
@@ -29,4 +27,45 @@
   <div *ngIf="!ISvalid">
     THIS is not valid show with else block
   </div>
-</ng-template>
+</ng-template> -->
+
+
+
+<!-- <h2>Switch Example</h2>
+
+
+<select (change)="set_dropdow($event)">
+  <option value="">Select the value</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="porsh">porsh</option>
+
+</select>
+<div [ngSwitch]="dietSelection">
+  <p *ngSwitchCase="one">Gluten-free</p>
+  <p *ngSwitchCase="Two">Vegetarian / Vegan</p>
+  <p *ngSwitchCase="Three">Paleo</p>
+  <p *ngSwitchDefault>Default</p>
+
+</div> -->
+
+<h2 Example of Track By></h2>
+<table border ="1">
+  <tr *ngFor ="let s of student; let i=index; trackBy:trackbystudent">
+<td> {{i+1}}</td>
+<td> {{s.id}}</td>
+<td> {{s.name}}</td>
+<td> {{s.gender}}</td>
+<td>{{s.age}}</td>
+<td >{{s.course}}</td>
+
+  </tr>
+</table>
+
+<br/>
+
+<br/>
+<button (click)="getMorestudent()" > Get More Data</button>
+
+  
